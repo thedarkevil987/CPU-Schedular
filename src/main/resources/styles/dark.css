@@ -1,0 +1,164 @@
+.btn{
+    -fx-text-fill: white;
+    -fx-font-size:14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Century Gothic";
+    -fx-background-color: #2c3442;
+    -fx-background-radius: 20;
+}
+.btn:hover{
+    -fx-background-color: #5D94FF;
+}
+
+.logo-pane{
+    -fx-background-color: #2C2C34;
+    -fx-background-radius: 20;
+}
+.main-pane{
+    -fx-background-color:#090909;
+}
+.title-text{
+    -fx-fill: white;
+}
+.mainui-container-pane{
+    -fx-background-color: #212832;
+}
+.title-pane{
+    -fx-background-color:#50c1d8;
+    -fx-background-radius: 10 10 0 0;
+}
+
+/*********** Start of FCFS *************/
+
+.root-pane{
+    -fx-background-color: #090909;
+}
+
+.chart-pane-container{
+    -fx-background-color: #212832;
+}
+.form-pane{
+    -fx-background-color: #212832;
+}
+.table-pane{
+    -fx-background-color: #212832;
+}
+
+.chart-pane{
+    -fx-background-color:#2c3442;
+    -fx-background:transparent;
+}
+
+.color-picker {
+    -fx-background-color: #2c3442;
+}
+.color-picker .color-picker-label .text {
+    visibility: true;
+}
+.color-picker .color-picker-label{
+    -fx-text-fill: white;
+}
+
+.return-back-btn{
+    -fx-background-color: white;
+    -fx-shape: "M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10";
+}
+.exit-btn {
+    -fx-background-color: white;
+    -fx-shape: "M10.185,1.417c-4.741,0-8.583,3.842-8.583,8.583c0,4.74,3.842,8.582,8.583,8.582S18.768,14.74,18.768,10C18.768,5.259,14.926,1.417,10.185,1.417 M10.185,17.68c-4.235,0-7.679-3.445-7.679-7.68c0-4.235,3.444-7.679,7.679-7.679S17.864,5.765,17.864,10C17.864,14.234,14.42,17.68,10.185,17.68 M10.824,10l2.842-2.844c0.178-0.176,0.178-0.46,0-0.637c-0.177-0.178-0.461-0.178-0.637,0l-2.844,2.841L7.341,6.52c-0.176-0.178-0.46-0.178-0.637,0c-0.178,0.176-0.178,0.461,0,0.637L9.546,10l-2.841,2.844c-0.178,0.176-0.178,0.461,0,0.637c0.178,0.178,0.459,0.178,0.637,0l2.844-2.841l2.844,2.841c0.178,0.178,0.459,0.178,0.637,0c0.178-0.176,0.178-0.461,0-0.637L10.824,10z";
+}
+.switch-mode-btn{
+    -fx-background-color: white;
+    -fx-shape: "M5.114,5.726c0.169,0.168,0.442,0.168,0.611,0c0.168-0.169,0.168-0.442,0-0.61L3.893,3.282c-0.168-0.168-0.442-0.168-0.61,0c-0.169,0.169-0.169,0.442,0,0.611L5.114,5.726z M3.955,10c0-0.239-0.193-0.432-0.432-0.432H0.932C0.693,9.568,0.5,9.761,0.5,10s0.193,0.432,0.432,0.432h2.591C3.761,10.432,3.955,10.239,3.955,10 M10,3.955c0.238,0,0.432-0.193,0.432-0.432v-2.59C10.432,0.693,10.238,0.5,10,0.5S9.568,0.693,9.568,0.932v2.59C9.568,3.762,9.762,3.955,10,3.955 M14.886,5.726l1.832-1.833c0.169-0.168,0.169-0.442,0-0.611c-0.169-0.168-0.442-0.168-0.61,0l-1.833,1.833c-0.169,0.168-0.169,0.441,0,0.61C14.443,5.894,14.717,5.894,14.886,5.726 M5.114,14.274l-1.832,1.833c-0.169,0.168-0.169,0.441,0,0.61c0.168,0.169,0.442,0.169,0.61,0l1.833-1.832c0.168-0.169,0.168-0.442,0-0.611C5.557,14.106,5.283,14.106,5.114,14.274 M19.068,9.568h-2.591c-0.238,0-0.433,0.193-0.433,0.432s0.194,0.432,0.433,0.432h2.591c0.238,0,0.432-0.193,0.432-0.432S19.307,9.568,19.068,9.568 M14.886,14.274c-0.169-0.168-0.442-0.168-0.611,0c-0.169,0.169-0.169,0.442,0,0.611l1.833,1.832c0.168,0.169,0.441,0.169,0.61,0s0.169-0.442,0-0.61L14.886,14.274z M10,4.818c-2.861,0-5.182,2.32-5.182,5.182c0,2.862,2.321,5.182,5.182,5.182s5.182-2.319,5.182-5.182C15.182,7.139,12.861,4.818,10,4.818M10,14.318c-2.385,0-4.318-1.934-4.318-4.318c0-2.385,1.933-4.318,4.318-4.318c2.386,0,4.318,1.933,4.318,4.318C14.318,12.385,12.386,14.318,10,14.318 M10,16.045c-0.238,0-0.432,0.193-0.432,0.433v2.591c0,0.238,0.194,0.432,0.432,0.432s0.432-0.193,0.432-0.432v-2.591C10.432,16.238,10.238,16.045,10,16.045";
+}
+.reset-btn{
+    -fx-background-color: #62343d;
+    -fx-text-fill: #f3cfcf;
+    -fx-font-weight: bold;
+}
+.run-btn{
+    -fx-background-color: rgba(97, 189, 156, 0.2);
+    -fx-text-fill: #02a067;
+    -fx-font-weight: bold;
+}
+.add-btn{
+    -fx-background-color: #3f3831;
+    -fx-text-fill: #c59865;
+    -fx-font-weight: bold;
+}
+.text-field{
+    -fx-text-fill: white;
+    -fx-border-insets: 0;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-background-color: derive(#2c3442, 0%);
+}
+.text-field:focused{
+    -fx-border-color: #5D94FF;
+    -fx-border-style: hidden hidden solid hidden;
+}
+
+.cpu-status-label-container,.average-wt-label-container,.average-ta-label-container{
+    -fx-background-radius: 30px 0 30px 0;
+    -fx-border-radius: 30px 0 30px 0;
+}
+.cpu-status-label-container{
+    -fx-background-color: #00AB1B;
+}
+.average-wt-label-container{
+    -fx-background-color: #FBB500;
+}
+.average-ta-label-container{
+    -fx-background-color: #FF6838;
+}
+.status-labels{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: CENTER;
+}
+
+
+.table{
+    -fx-background-color: #2c3442;
+}
+.table .table-column{
+    -fx-alignment: CENTER;
+}
+
+.table .column-header-background .filler {
+    -fx-background-color:#5D94FF ;
+}
+.table .corner {
+    -fx-background-color: #5D94FF;
+}
+.table .column-header {
+    -fx-background-color: #5D94FF;
+}
+.table .column-header-background{
+    -fx-background-color: #5D94FF;
+}
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-text-background-color: white;
+}
+.table-row-cell:odd{
+    -fx-background-color: transparent;
+}
+.table-row-cell:even{
+    -fx-background-color: #1d232c;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  #5D94FF;
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background{
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
