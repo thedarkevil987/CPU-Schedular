@@ -21,6 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -93,7 +94,7 @@ public class FCFSController implements Initializable {
     ObservableList<Process> processesList;
     private Timeline timeLine;
     private int counterSeconds = 0;
-    private ArrayList<Process> temp;
+    private ArrayList<Process> temp = new ArrayList<>();
     private int maxSeconds;
     private ArrayList<Process> secondsArray = new ArrayList<>();
     double xOffset;
@@ -111,33 +112,51 @@ public class FCFSController implements Initializable {
         temp.clear();
         secondsArray.clear();
         cpuStatus.setText("Idle");
+        averageTA.setText("0");
+        averageWT.setText("0");
         Table.setItems(FXCollections.observableArrayList(temp));
         Table.refresh();
+        liveSimulation.setDisable(false);
     }
     @FXML
     void runBtnClicked(MouseEvent event) {
-        runBtn.setDisable(true);
-        ResetBtn.setDisable(false);
-        maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
-        if(liveSimulation.isSelected()){
-            plot(1);
-        }else{
-            plot(0.01);
+        if(!temp.isEmpty()){
+            runBtn.setDisable(true);
+            ResetBtn.setDisable(false);
+            maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
+            if(liveSimulation.isSelected()){
+                plot(1);
+            }else{
+                plot(0.01);
+            }
+            isRunning = true;
+            liveSimulation.setDisable(true);
         }
-        isRunning = true;
     }
     @FXML
     void addProcessBtnClicked() {
-        if(!arrivalTimeField.getText().isEmpty() || !burstTimeField.getText().isEmpty() || !processNameField.getText().isEmpty()){
-            if(isRunning){
-                if(Integer.parseInt(arrivalTimeField.getText()) >= counterSeconds){
+        try {
+            if (!arrivalTimeField.getText().isEmpty() && !burstTimeField.getText().isEmpty() && !processNameField.getText().isEmpty()) {
+                if (isRunning) {
+                    if (Integer.parseInt(arrivalTimeField.getText()) >= counterSeconds) {
+                        addProcess();
+                    } else {
+                        Alert a = new Alert(Alert.AlertType.ERROR);
+                        a.setTitle("Invalid Arrival Time Error");
+                        a.setHeaderText("Invalid Arrival Time");
+                        a.setContentText("Please enter arrival time > current simulation time");
+                        a.show();
+                    }
+                } else {
                     addProcess();
-                }else{
-                    System.out.println("Invalid arrival time");
                 }
-            }else {
-                addProcess();
             }
+        }catch (Exception e){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("Invalid Input");
+            a.setHeaderText("Invalid Text Input");
+            a.setContentText("Please enter correct text in text fields");
+            a.show();
         }
     }
     @FXML
@@ -208,6 +227,7 @@ public class FCFSController implements Initializable {
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
         Stage stage =new Stage();
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
@@ -222,9 +242,9 @@ public class FCFSController implements Initializable {
         }
         Table.getItems().add(p);
         sortProcesses();
-        updateAverage(temp);
         secondsArray.clear();
-        secondsArray = FCFS.getFCFSSecondsArray(temp,maxSeconds);
+        secondsArray = FCFS.getFCFSSecondsArray(temp);
+        updateAverage(temp);
     }
     private void sortProcesses(){
         processesList = Table.getItems();
@@ -235,14 +255,14 @@ public class FCFSController implements Initializable {
         maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
     }
     private void updateAverage(ArrayList<Process> processes){
-        double sumTAT = 0;
+        double sumTA = 0;
         double sumWT = 0;
         for(Process p :processes){
-            sumTAT += p.getTurnAroundTime();
+            sumTA += p.getTurnAroundTime();
             sumWT += p.getWaitingTime();
         }
-        averageTA.setText(Double.toString(sumTAT / processes.size()));
-        averageWT.setText(Double.toString(sumWT / processes.size()));
+        averageTA.setText(String.format("%.2f", sumTA / processes.size()));
+        averageWT.setText(String.format("%.2f", sumWT / processes.size()));
     }
     private Color generateRandomColor() {
         Random random = new Random();

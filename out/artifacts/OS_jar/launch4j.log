@@ -1,0 +1,24 @@
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OS_jar\CPUSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OS_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Java\javafx-sdk-22\bin;C:\Program Files\Java\jdk-18.0.1.1\bin;D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jdk-18.0.1.1\bin
+JRE paths:	;C:\Program Files\Java\javafx-sdk-22\bin;C:\Program Files\Java\jdk-18.0.1.1\bin;D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jdk-18.0.1.1\bin
+Check launcher:	C:\Program Files\Java\javafx-sdk-22\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-18.0.1.1\bin\javaw.exe (OK)
+Warning:	formatJavaVersion() too many parts added.
+Version string: 1.018.000_001 / 64-Bit (OK)
+Main class:	com.operatingsystem.operaingsystems.MainApplication
+Info:		Classpath not defined.
+Launcher:	C:\Program Files\Java\jdk-18.0.1.1\bin\javaw.exe
+Launcher args:	 --module-path "C:\Program Files\Java\javafx-sdk-22\lib" --add-modules javafx.controls,javafx.fxml -classpath "D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OS_jar\CPUSchedular.exe" com.operatingsystem.operaingsystems.MainApplication
+Args length:	256/32768 chars
+Exit code:	0

@@ -21,6 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -95,7 +96,7 @@ public class RRController implements Initializable {
     ObservableList<Process> processesList;
     private Timeline timeLine;
     private int counterSeconds = 0;
-    private ArrayList<Process> temp;
+    private ArrayList<Process> temp = new ArrayList<>();
     private int maxSeconds;
     private ArrayList<Process> secondsArray = new ArrayList<>();
     double xOffset;
@@ -117,31 +118,47 @@ public class RRController implements Initializable {
         averageWT.setText("0");
         Table.setItems(FXCollections.observableArrayList(temp));
         Table.refresh();
+        liveSimulation.setDisable(false);
     }
     @FXML
     void runBtnClicked(MouseEvent event) {
-        runBtn.setDisable(true);
-        ResetBtn.setDisable(false);
-        maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
-        if(liveSimulation.isSelected()){
-            plot(1);
-        }else{
-            plot(0.01);
+        if(!temp.isEmpty()){
+            runBtn.setDisable(true);
+            ResetBtn.setDisable(false);
+            maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
+            if(liveSimulation.isSelected()){
+                plot(1);
+            }else{
+                plot(0.01);
+            }
+            isRunning = true;
+            liveSimulation.setDisable(true);
         }
-        isRunning = true;
     }
     @FXML
     void addProcessBtnClicked() {
-        if(!arrivalTimeField.getText().isEmpty() || !burstTimeField.getText().isEmpty() || !processNameField.getText().isEmpty()){
-            if(isRunning){
-                if(Integer.parseInt(arrivalTimeField.getText()) >= counterSeconds){
+        try {
+            if (!arrivalTimeField.getText().isEmpty() && !burstTimeField.getText().isEmpty() && !processNameField.getText().isEmpty()) {
+                if (isRunning) {
+                    if (Integer.parseInt(arrivalTimeField.getText()) >= counterSeconds) {
+                        addProcess();
+                    } else {
+                        Alert a = new Alert(Alert.AlertType.ERROR);
+                        a.setTitle("Invalid Arrival Time Error");
+                        a.setHeaderText("Invalid Arrival Time");
+                        a.setContentText("Please enter arrival time > current simulation time");
+                        a.show();
+                    }
+                } else {
                     addProcess();
-                }else{
-                    System.out.println("Invalid arrival time");
                 }
-            }else {
-                addProcess();
             }
+        }catch (Exception e){
+            Alert a = new Alert(Alert.AlertType.ERROR,"Nice Box.", ButtonType.CLOSE);
+            a.setTitle("Invalid Input");
+            a.setHeaderText("Invalid Text Input");
+            a.setContentText("Please enter correct text in text fields");
+            a.show();
         }
     }
     @FXML
@@ -212,6 +229,7 @@ public class RRController implements Initializable {
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
         Stage stage =new Stage();
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);

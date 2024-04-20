@@ -15,9 +15,9 @@ public class RR {
                 result.add(null);
             }else{
                 result.add(currentlyProcessing.get(i%currentlyProcessing.size()));
-                currentlyProcessing.get(i%currentlyProcessing.size()).setRemainingBurstTime(currentlyProcessing.get(i%currentlyProcessing.size()).getRemainingBurstTime() - 1);
-                if(currentlyProcessing.get(i%currentlyProcessing.size()).getRemainingBurstTime() == 0){
-                    currentlyProcessing.get(i%currentlyProcessing.size()).setRemainingBurstTime(currentlyProcessing.get(i%currentlyProcessing.size()).getBurstTime());
+                currentlyProcessing.get(i%currentlyProcessing.size()).setRemainingBurstTimeCalc(currentlyProcessing.get(i%currentlyProcessing.size()).getRemainingBurstTimeCalc() - 1);
+                if(currentlyProcessing.get(i%currentlyProcessing.size()).getRemainingBurstTimeCalc() == 0){
+                    currentlyProcessing.get(i%currentlyProcessing.size()).setRemainingBurstTimeCalc(currentlyProcessing.get(i%currentlyProcessing.size()).getBurstTime());
                     currentlyProcessing.get(i%currentlyProcessing.size()).setFinishTime(i + 1);
                     temp.remove(currentlyProcessing.get(i%currentlyProcessing.size()));
                     currentlyProcessing.remove(i%currentlyProcessing.size());
@@ -37,9 +37,6 @@ public class RR {
     public static void main(String[] args) {
         ArrayList<Process> List =new ArrayList<>();
         List.add(new Process("P1",3,3));
-        //List.add(new Process("P3",20,2));
-        System.out.println(getRRSecondsArray(List));
-        List.add(new Process("P2",3,3));
-        System.out.println(getRRSecondsArray(List));
+        List.add(new Process("P2",4,2));
     }
 }

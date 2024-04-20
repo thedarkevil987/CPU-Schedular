@@ -5,6 +5,7 @@ import eu.iamgio.animated.transition.animations.clip.CircleClipOut;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.io.IOException;
@@ -19,12 +20,12 @@ public class MainApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("/styles/dark.css").toExternalForm());
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }

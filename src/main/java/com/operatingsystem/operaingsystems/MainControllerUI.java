@@ -7,8 +7,10 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -32,6 +34,8 @@ public class MainControllerUI {
     private AnchorPane titlePane;
     @FXML
     private AnchorPane mainPane;
+    double xOffset;
+    double yOffset;
     @FXML
     void FCFSBtnClicked(MouseEvent event) throws IOException {
         displayFXML("FCFS-view.fxml");
@@ -63,6 +67,7 @@ public class MainControllerUI {
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
         Stage stage =new Stage();
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
@@ -82,6 +87,23 @@ public class MainControllerUI {
     @FXML
     void closeBtnClicled(MouseEvent event) {
         Platform.exit();
+    }
+
+    @FXML
+    void mainPaneDragged(MouseEvent event) {
+        Stage stage = (Stage) mainPane.getScene().getWindow();
+        stage.setX(event.getScreenX() - xOffset);
+        stage.setY(event.getScreenY() - yOffset);
+    }
+    @FXML
+    void mainPanePressed(MouseEvent event) {
+        xOffset = event.getSceneX();
+        yOffset = event.getSceneY();
+        mainPane.setCursor(Cursor.CLOSED_HAND);
+    }
+    @FXML
+    void mainPaneReleased(){
+        mainPane.setCursor(Cursor.DEFAULT);
     }
 
 }

@@ -11,9 +11,11 @@
     -fx-background-color: #5D94FF;
 }
 
-.logo-pane{
-    -fx-background-color: #FAFAFA;
-    -fx-background-radius: 20;
+.img{
+    -fx-background-color: #5D94FF;
+    -fx-border-radius: 50px 0 50px 0;
+    -fx-background-radius: 50px 0 50px 0;
+    -fx-effect: dropshadow(three-pass-box,derive(#5D94FF,-20%) , 2, 0, 5, 5);
 }
 .main-pane{
     -fx-background-color:#F0F2F5;
@@ -28,9 +30,7 @@
     -fx-background-color:#50c1d8;
     -fx-background-radius: 10 10 0 0;
 }
-
-
-/*********** Start of FCFS *************/
+/*********** Start of Panes *************/
 
 .root-pane{
     -fx-background-color: #F0F2F5;
@@ -75,6 +75,15 @@
 .check-boxes{
     -fx-text-fill: black;
 }
+.check-boxes .box{
+    -fx-border-color:black;
+}
+.check-boxes:selected .box {
+    -fx-border-color: #5d94ff;
+}
+.radio-btns{
+    -fx-text-fill: black;
+}
 .reset-btn{
     -fx-background-color: #62343d;
     -fx-text-fill: #f3cfcf;
@@ -107,6 +116,7 @@
     -fx-background-radius: 30px 0 30px 0;
     -fx-border-radius: 30px 0 30px 0;
 }
+
 .cpu-status-label-container{
     -fx-background-color: #00AB1B;
 }

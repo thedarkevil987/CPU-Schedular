@@ -21,6 +21,13 @@ public class Process {
     private String color;
     private double actualTime;
     private double RemainingBurstTime;
+    public double getRemainingBurstTimeCalc() {
+        return remainingBurstTimeCalc;
+    }
+    public void setRemainingBurstTimeCalc(double remainingBurstTimecalc) {
+        this.remainingBurstTimeCalc = remainingBurstTimecalc;
+    }
+    private double remainingBurstTimeCalc;
     private double finishTime;
     private double turnAroundTime;
     private double waitingTime;
@@ -46,8 +53,17 @@ public class Process {
         this.burstTime = burstTime;
         this.RemainingBurstTime = burstTime;
         this.color = processColor;
+        this.remainingBurstTimeCalc = burstTime;
     }
-
+    public Process(String name, double arrivalTime, double burstTime, String processColor,double priority){
+        this.name = name;
+        this.arrivalTime = arrivalTime;
+        this.burstTime = burstTime;
+        this.RemainingBurstTime = burstTime;
+        this.color = processColor;
+        this.priority = priority;
+        this.remainingBurstTimeCalc = burstTime;
+    }
     public Process(String name, double arrivalTime, double burstTime){
         this.name = name;
         this.arrivalTime = arrivalTime;
@@ -58,6 +74,7 @@ public class Process {
         this.name = name;
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;
+        this.RemainingBurstTime = burstTime;
         this.priority = priority;
     }
     public double getRemainingBurstTime() {
@@ -111,7 +128,7 @@ public class Process {
     @Override
     public String toString(){
         return "Name: "+ this.name +"\n"+ "Burst time:"+this.getBurstTime() + "\n"
-                + "Arrival time: "+ this.getArrivalTime()+"\n"+ "Remaining time: "+ this.getRemainingBurstTime()+"\n"+"Finish time: " + this.getFinishTime() + "\n";
+                + "Arrival time: "+ this.getArrivalTime()+"\n"+ "Remaining time: "+ this.getRemainingBurstTime()+"\n"+"Finish time: " + this.getFinishTime() + "\n"+"Actual time: " + this.getActualTime() + "\n";
     }
 }
 

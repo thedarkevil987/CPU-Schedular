@@ -1,0 +1,252 @@
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+JRE paths:	;D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+Check launcher:	D:\Programs\VM\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\ProgramData\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microchip\xc8\v2.41\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\D\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MongoDB\Server\7.0\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\150\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\DevTools\apache-maven-3.9.6\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Brackets\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\CodeBlocks\MinGW\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Modelsim\modelsim_ase\win32aloem\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.3.2\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe (OK)
+Version string: 1.008.000_331 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe
+Launcher args:	-jar "D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe"
+Args length:	111/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+JRE paths:	;D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+Check launcher:	D:\Programs\VM\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\ProgramData\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microchip\xc8\v2.41\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\D\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MongoDB\Server\7.0\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\150\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\DevTools\apache-maven-3.9.6\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Brackets\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\CodeBlocks\MinGW\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Modelsim\modelsim_ase\win32aloem\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.3.2\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe (OK)
+Version string: 1.008.000_331 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe
+Launcher args:	-jar "D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe"
+Args length:	111/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+JRE paths:	;D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+Check launcher:	D:\Programs\VM\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\ProgramData\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microchip\xc8\v2.41\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\D\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MongoDB\Server\7.0\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\150\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\DevTools\apache-maven-3.9.6\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Brackets\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\CodeBlocks\MinGW\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Modelsim\modelsim_ase\win32aloem\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.3.2\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe (OK)
+Version string: 1.008.000_331 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe
+Launcher args:	-jar "D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe"
+Args length:	111/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+JRE paths:	
+Error msg:	This application requires a Java Runtime Environment.
+Error:		The system could not find the environment option that was entered.
+
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+JRE paths:	
+Error msg:	This application requires a Java Runtime Environment.
+Error:		The system could not find the environment option that was entered.
+
+
+
+Version:	3.50
+CmdLine:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+JRE paths:	;D:\Programs\VM\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microchip\xc8\v2.41\bin;D;D:\Programs\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Programs\nodejs\;C:\DevTools\apache-maven-3.9.6\bin;C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\azazk\AppData\Local\Programs\Python\Python312\;C:\Users\azazk\AppData\Local\Microsoft\WindowsApps;D:\Programs\Brackets\;C:\Users\azazk\AppData\Local\GitHubDesktop\bin;C:\Program Files\CodeBlocks\MinGW\bin;D:\Study\ASU\Modelsim\modelsim_ase\win32aloem;C:\Program Files\JetBrains\PyCharm 2023.3.2\bin;;C:\Users\azazk\.dotnet\tools;C:\Users\azazk\AppData\Roaming\npm;C:\Program Files\Java\jre1.8.0_331\bin
+Check launcher:	D:\Programs\VM\bin\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\ProgramData\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microchip\xc8\v2.41\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\D\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MongoDB\Server\7.0\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\150\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\nodejs\bin\javaw.exe (not found)
+Check launcher:	C:\DevTools\apache-maven-3.9.6\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\Scripts\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Programs\Python\Python312\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	D:\Programs\Brackets\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\CodeBlocks\MinGW\bin\javaw.exe (not found)
+Check launcher:	D:\Study\ASU\Modelsim\modelsim_ase\win32aloem\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.3.2\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Users\azazk\AppData\Roaming\npm\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe (OK)
+Version string: 1.008.000_331 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jre1.8.0_331\bin\javaw.exe
+Launcher args:	-jar "D:\Study\ASU\Operating Systems\Project\OperaingSystems\out\artifacts\OperaingSystems_jar\OSSchedular.exe"
+Args length:	111/32768 chars
+Exit code:	0

@@ -9,10 +9,11 @@
 .btn:hover{
     -fx-background-color: #5D94FF;
 }
-
-.logo-pane{
-    -fx-background-color: #2C2C34;
-    -fx-background-radius: 20;
+.img{
+    -fx-background-color: #5D94FF;
+    -fx-border-radius: 50px 0 50px 0;
+    -fx-background-radius: 50px 0 50px 0;
+    -fx-effect: dropshadow(three-pass-box,derive(#5D94FF,-40%) , 2, 0, 5, 5);
 }
 .main-pane{
     -fx-background-color:#090909;
@@ -27,6 +28,7 @@
     -fx-background-color:#50c1d8;
     -fx-background-radius: 10 10 0 0;
 }
+
 
 /*********** Start of FCFS *************/
 

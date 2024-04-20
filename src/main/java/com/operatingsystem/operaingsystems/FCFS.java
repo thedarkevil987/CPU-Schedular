@@ -6,7 +6,8 @@ import java.util.Comparator;
 
 public class FCFS {
 
-    public static ArrayList<Process> getFCFSSecondsArray(ArrayList<Process> processes,int maxSeconds){
+    public static ArrayList<Process> getFCFSSecondsArray(ArrayList<Process> processes){
+        int maxSeconds = (int)processes.get(processes.size()-1).getActualTime() + (int)processes.get(processes.size()-1).getBurstTime();
         ArrayList<Process> secondsArray = new ArrayList<>();
         for(int i = 0;i<maxSeconds;i++){
             secondsArray.add(null);
@@ -16,6 +17,9 @@ public class FCFS {
             int actualTime = (int)process.getActualTime();
             for(int i = actualTime; i < actualTime + burstTime;i++){
                 secondsArray.set(i,process);
+                if(i == actualTime + burstTime - 1){
+                    secondsArray.get(i).setFinishTime(i+1);
+                }
             }
         }
         return secondsArray;
@@ -23,14 +27,11 @@ public class FCFS {
 
     public static void main(String[] args){
         ArrayList<Process> processList =new ArrayList<>();
-        processList.add(new Process("P1",0,3,"red"));
-        processList.add(new Process("P2",0,4,"blue"));
+        processList.add(new Process("P1",0,3));
+        processList.add(new Process("P2",0,4));
         processList.add(new Process("P3",1,2));
-        processList.add(new Process("P4",0,1));
-        processList.add(new Process("P5",0,10));
-        processList.add(new Process("P6",2,2));
         Process.sort(processList);
-        System.out.println(processList);
+        Process.calculateActualStartTimes(processList);
     }
 
 }

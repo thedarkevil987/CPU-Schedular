@@ -1,14 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import eu.iamgio.animated.transition.Animation?>
+<?import eu.iamgio.animated.transition.container.AnimatedHBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.operatingsystem.operaingsystems.PriorityController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="mainPane" onMouseDragged="#mainPaneDragged" onMousePressed="#mainPanePressed" onMouseReleased="#mainPaneReleased" prefHeight="800.0" prefWidth="1200.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.operatingsystem.operaingsystems.PriorityController">
+   <children>
+      <AnchorPane layoutX="84.0" layoutY="529.0" prefHeight="180.0" prefWidth="940.0" styleClass="chart-pane-container" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="4.0" prefHeight="36.0" prefWidth="1180.0" styleClass="chart-pane-header" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Text fill="WHITE" layoutX="365.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pane-header" text="Gantt Chart" textAlignment="CENTER" wrappingWidth="450.11328125">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="chart-pane" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+               <content>
+                  <VBox alignment="CENTER_LEFT" prefHeight="105.0">
+                     <children>
+                        <AnimatedHBox fx:id="hboxColor">
+                           <in>
+                              <Animation type="ZoomIn" />
+                           </in>
+                        </AnimatedHBox>
+                        <AnimatedHBox fx:id="hboxText">
+                           <in>
+                              <Animation type="ZoomIn" />
+                           </in>
+                        </AnimatedHBox>
+                     </children>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="58.0" minWidth="255.0" prefHeight="570.0" prefWidth="358.0" styleClass="form-pane" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="837.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Text fill="WHITE" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pane-header" text="Controls" textAlignment="CENTER" wrappingWidth="348.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <JFXButton layoutX="30.0" layoutY="436.0" onMouseClicked="#addProcessBtnClicked" prefHeight="25.0" prefWidth="298.0" styleClass="add-btn" text="Add Process" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+            <ColorPicker fx:id="ColorField" disable="true" layoutX="30.0" layoutY="354.0" prefHeight="25.0" prefWidth="153.0" styleClass="color-box" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="354.0" />
+            <JFXButton fx:id="runBtn" layoutX="30.0" layoutY="520.0" onMouseClicked="#runBtnClicked" prefHeight="25.0" prefWidth="130.0" styleClass="run-btn" text="Run" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0" />
+            <Label layoutX="29.0" layoutY="89.0" text="Process Name" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="213.0" text="Burst Time" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="149.0" text="Arrival Time" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="334.0" text="Color" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="ResetBtn" disable="true" layoutX="198.0" layoutY="497.0" onMouseClicked="#resetBtnClicked" prefHeight="25.0" prefWidth="130.0" styleClass="reset-btn" text="Reset" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="30.0" />
+            <JFXCheckBox fx:id="liveSimulation" checkedColor="#5d94ff" layoutX="25.0" layoutY="481.0" prefHeight="20.0" prefWidth="140.0" selected="true" styleClass="check-boxes" text="Live Simulation" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="481.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXCheckBox>
+            <TextField fx:id="processNameField" layoutX="29.0" layoutY="109.0" onKeyPressed="#processNameFieldKey" styleClass="text-field" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="109.0" />
+            <TextField fx:id="arrivalTimeField" layoutX="29.0" layoutY="169.0" onKeyPressed="#arrivalTimeFieldKey" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+            <TextField fx:id="burstTimeField" layoutX="29.0" layoutY="233.0" onKeyPressed="#burstTimeFieldKey" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="233.0" />
+            <JFXCheckBox fx:id="autoColoring" checkedColor="#5d94ff" layoutX="194.0" layoutY="481.0" onMouseClicked="#autoColorClicked" prefHeight="20.0" prefWidth="130.0" selected="true" styleClass="check-boxes" text="Auto Coloring" textFill="#f5f5f5" unCheckedColor="WHITE" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="481.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXRadioButton fx:id="preemptiveRadioBtn" layoutX="25.0" layoutY="399.0" onMouseClicked="#preemptiveClicked" styleClass="radio-btns" text="Preemptive" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.364705890417099" green="0.5803921818733215" blue="1.0" />
+               </selectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="schedulingType" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="nonPreemptiveRadioBtn" layoutX="190.0" layoutY="399.0" onMouseClicked="#nonPreemptiveClicked" selected="true" styleClass="radio-btns" text="Non-preemptive" textFill="WHITE" toggleGroup="$schedulingType" AnchorPane.rightAnchor="30.0">
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.364705890417099" green="0.5803921818733215" blue="1.0" />
+               </selectedColor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXRadioButton>
+            <Label layoutX="30.0" layoutY="275.0" text="Priority" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="priorityField" layoutX="30.0" layoutY="295.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="368.0" layoutY="40.0" prefHeight="570.0" prefWidth="827.0" styleClass="table-pane" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="368.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <TableView fx:id="Table" layoutX="11.0" layoutY="138.0" prefHeight="422.0" prefWidth="696.0" styleClass="table" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="138.0">
+               <columns>
+                  <TableColumn fx:id="PNCol" editable="false" prefWidth="119.0" resizable="false" sortable="false" text="Process Name" />
+                  <TableColumn fx:id="BTCol" editable="false" prefWidth="149.0" resizable="false" sortable="false" text="Burst Time" />
+                  <TableColumn fx:id="RBTCol" editable="false" prefWidth="151.0" resizable="false" sortable="false" text="Remaining Burst Time" />
+                  <TableColumn fx:id="ATCol" editable="false" minWidth="7.0" prefWidth="114.0" resizable="false" sortable="false" text="Arrival Time" />
+                  <TableColumn fx:id="priorityCol" prefWidth="99.0" resizable="false" text="Priority" />
+                  <TableColumn fx:id="colorCol" editable="false" prefWidth="154.0" resizable="false" sortable="false" text="Color" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Text fill="WHITE" layoutX="183.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pane-header" text="Statistics" textAlignment="CENTER" wrappingWidth="450.11328125" AnchorPane.leftAnchor="183.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Label layoutX="97.0" layoutY="59.0" text="CPU Status" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="335.0" layoutY="59.0" text="Average Waiting Time" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="604.0" layoutY="59.0" text="Average Turnaround Time" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <StackPane layoutX="658.0" layoutY="87.0" prefHeight="40.0" prefWidth="78.0" styleClass="average-ta-label-container">
+               <children>
+                  <Text fx:id="averageTA" layoutX="35.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="status-labels" text="0" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane alignment="CENTER" layoutX="96.0" layoutY="87.0" prefHeight="40.0" prefWidth="80.0" styleClass="cpu-status-label-container">
+               <children>
+                  <Text fx:id="cpuStatus" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="status-labels" text="Idle" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="374.0" layoutY="87.0" prefHeight="40.0" prefWidth="80.0" styleClass="average-wt-label-container">
+               <children>
+                  <Text fx:id="averageWT" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="status-labels" text="0" textAlignment="CENTER" />
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1161.0" layoutY="14.0" onMouseClicked="#closeBtnClicked" prefHeight="25.0" prefWidth="25.0" styleClass="exit-btn" text=" " AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="8.0" />
+      <JFXButton layoutX="14.0" layoutY="8.0" onMouseClicked="#returnBackBtn" prefHeight="25.0" prefWidth="25.0" styleClass="return-back-btn" text=" " AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="8.0" />
+      <Text fill="WHITE" layoutX="426.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pane-header" text="Priority" textAlignment="CENTER" wrappingWidth="348.0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="47.0" layoutY="8.0" onMouseClicked="#switchBtnClicked" prefHeight="25.0" prefWidth="25.0" styleClass="switch-mode-btn" text=" " />
+   </children>
 </AnchorPane>
