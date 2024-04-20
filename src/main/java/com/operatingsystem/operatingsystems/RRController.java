@@ -1,8 +1,7 @@
-package com.operatingsystem.operaingsystems;
+package com.operatingsystem.operatingsystems;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
-import com.jfoenix.controls.JFXRadioButton;
 import eu.iamgio.animated.transition.AnimatedThemeSwitcher;
 import eu.iamgio.animated.transition.animations.clip.CircleClipOut;
 import eu.iamgio.animated.transition.container.AnimatedHBox;
@@ -28,8 +27,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -43,7 +40,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 
-public class SJFController implements Initializable {
+public class RRController implements Initializable {
     @FXML
     private AnchorPane mainPane;
     @FXML
@@ -89,12 +86,6 @@ public class SJFController implements Initializable {
     @FXML
     private JFXCheckBox autoColoring;
     @FXML
-    private JFXRadioButton nonPreemptiveRadioBtn;
-    @FXML
-    private JFXRadioButton preemptiveRadioBtn;
-    @FXML
-    private ToggleGroup schedulingType;
-    @FXML
     private Text cpuStatus;
     @FXML
     private Text averageTA;
@@ -125,8 +116,6 @@ public class SJFController implements Initializable {
         averageWT.setText("0");
         Table.setItems(FXCollections.observableArrayList(temp));
         Table.refresh();
-        nonPreemptiveRadioBtn.setDisable(false);
-        preemptiveRadioBtn.setDisable(false);
         liveSimulation.setDisable(false);
     }
     @FXML
@@ -141,8 +130,6 @@ public class SJFController implements Initializable {
                 plot(0.01);
             }
             isRunning = true;
-            nonPreemptiveRadioBtn.setDisable(true);
-            preemptiveRadioBtn.setDisable(true);
             liveSimulation.setDisable(true);
         }
     }
@@ -165,7 +152,7 @@ public class SJFController implements Initializable {
                 }
             }
         }catch (Exception e){
-            Alert a = new Alert(Alert.AlertType.ERROR);
+            Alert a = new Alert(Alert.AlertType.ERROR,"Nice Box.", ButtonType.CLOSE);
             a.setTitle("Invalid Input");
             a.setHeaderText("Invalid Text Input");
             a.setContentText("Please enter correct text in text fields");
@@ -227,21 +214,7 @@ public class SJFController implements Initializable {
             burstTimeField.requestFocus();
         }
     }
-    @FXML
-    void nonPreemptiveClicked(MouseEvent event) {
-        if (!temp.isEmpty()){
-            secondsArray = SJF.getSJFSecondsArray(temp, false);
-            updateAverage(temp);
-        }
-    }
 
-    @FXML
-    void preemptiveClicked(MouseEvent event) {
-        if (!temp.isEmpty()) {
-            secondsArray = SJF.getSJFSecondsArray(temp, true);
-            updateAverage(temp);
-        }
-    }
     private void displayFXML(String fxml) throws IOException {
         mainPane.getScene().getWindow().hide();
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
@@ -254,7 +227,7 @@ public class SJFController implements Initializable {
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
         Stage stage =new Stage();
-        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operatingsystems/cpu.png").toExternalForm()));
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
@@ -270,11 +243,7 @@ public class SJFController implements Initializable {
         Table.getItems().add(p);
         sortProcesses();
         secondsArray.clear();
-        if(preemptiveRadioBtn.isSelected()){
-            secondsArray = SJF.getSJFSecondsArray(temp,true);
-        }else if(nonPreemptiveRadioBtn.isSelected()){
-            secondsArray = SJF.getSJFSecondsArray(temp,false);
-        }
+        secondsArray = RR.getRRSecondsArray(temp);
         updateAverage(temp);
     }
     private void updateAverage(ArrayList<Process> processes){
@@ -345,7 +314,6 @@ public class SJFController implements Initializable {
         timeLine.setCycleCount(Timeline.INDEFINITE);
         timeLine.play();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ATCol.setCellValueFactory(new PropertyValueFactory<Process, String>("arrivalTime"));

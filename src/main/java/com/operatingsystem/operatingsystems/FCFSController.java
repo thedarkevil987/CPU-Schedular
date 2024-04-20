@@ -1,8 +1,7 @@
-package com.operatingsystem.operaingsystems;
+package com.operatingsystem.operatingsystems;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
-import com.jfoenix.controls.JFXRadioButton;
 import eu.iamgio.animated.transition.AnimatedThemeSwitcher;
 import eu.iamgio.animated.transition.animations.clip.CircleClipOut;
 import eu.iamgio.animated.transition.container.AnimatedHBox;
@@ -28,8 +27,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -43,7 +40,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 
-public class PriorityController implements Initializable {
+public class FCFSController implements Initializable {
     @FXML
     private AnchorPane mainPane;
     @FXML
@@ -64,9 +61,6 @@ public class PriorityController implements Initializable {
     private TableColumn<Process, String> BTCol;
 
     @FXML
-    private TableColumn<Process, String> priorityCol;
-
-    @FXML
     private TableView<Process> Table;
 
     @FXML
@@ -77,8 +71,6 @@ public class PriorityController implements Initializable {
 
     @FXML
     private TextField processNameField;
-    @FXML
-    private TextField priorityField;
 
     @FXML
     private JFXButton runBtn;
@@ -93,12 +85,6 @@ public class PriorityController implements Initializable {
     private JFXCheckBox liveSimulation;
     @FXML
     private JFXCheckBox autoColoring;
-    @FXML
-    private JFXRadioButton nonPreemptiveRadioBtn;
-    @FXML
-    private JFXRadioButton preemptiveRadioBtn;
-    @FXML
-    private ToggleGroup schedulingType;
     @FXML
     private Text cpuStatus;
     @FXML
@@ -130,8 +116,6 @@ public class PriorityController implements Initializable {
         averageWT.setText("0");
         Table.setItems(FXCollections.observableArrayList(temp));
         Table.refresh();
-        nonPreemptiveRadioBtn.setDisable(false);
-        preemptiveRadioBtn.setDisable(false);
         liveSimulation.setDisable(false);
     }
     @FXML
@@ -146,15 +130,13 @@ public class PriorityController implements Initializable {
                 plot(0.01);
             }
             isRunning = true;
-            nonPreemptiveRadioBtn.setDisable(true);
-            preemptiveRadioBtn.setDisable(true);
             liveSimulation.setDisable(true);
         }
     }
     @FXML
     void addProcessBtnClicked() {
         try {
-            if (!arrivalTimeField.getText().isEmpty() && !burstTimeField.getText().isEmpty() && !processNameField.getText().isEmpty() && !priorityField.getText().isEmpty()) {
+            if (!arrivalTimeField.getText().isEmpty() && !burstTimeField.getText().isEmpty() && !processNameField.getText().isEmpty()) {
                 if (isRunning) {
                     if (Integer.parseInt(arrivalTimeField.getText()) >= counterSeconds) {
                         addProcess();
@@ -232,27 +214,7 @@ public class PriorityController implements Initializable {
             burstTimeField.requestFocus();
         }
     }
-    @FXML
-    void burstTimeFieldKey(KeyEvent event) {
-        if (event.getCode() == KeyCode.ENTER) {
-            priorityField.requestFocus();
-        }
-    }
-    @FXML
-    void nonPreemptiveClicked(MouseEvent event) {
-        if (!temp.isEmpty()){
-            secondsArray = Priority.getPrioritySecondsArray(temp, false);
-            updateAverage(temp);
-        }
-    }
 
-    @FXML
-    void preemptiveClicked(MouseEvent event) {
-        if (!temp.isEmpty()) {
-            secondsArray = Priority.getPrioritySecondsArray(temp, true);
-            updateAverage(temp);
-        }
-    }
     private void displayFXML(String fxml) throws IOException {
         mainPane.getScene().getWindow().hide();
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
@@ -265,7 +227,7 @@ public class PriorityController implements Initializable {
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
         Stage stage =new Stage();
-        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operatingsystems/cpu.png").toExternalForm()));
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
@@ -274,19 +236,23 @@ public class PriorityController implements Initializable {
     private void addProcess(){
         Process p;
         if(autoColoring.isSelected()){
-            p = new Process(processNameField.getText(), Double.parseDouble(arrivalTimeField.getText()), Double.parseDouble(burstTimeField.getText()), generateRandomColor().toString().substring(2),Double.parseDouble(priorityField.getText()));
+            p = new Process(processNameField.getText(), Double.parseDouble(arrivalTimeField.getText()), Double.parseDouble(burstTimeField.getText()), generateRandomColor().toString().substring(2));
         }else{
-            p = new Process(processNameField.getText(), Double.parseDouble(arrivalTimeField.getText()), Double.parseDouble(burstTimeField.getText()), ColorField.getValue().toString().substring(2),Double.parseDouble(priorityField.getText()));
+            p = new Process(processNameField.getText(), Double.parseDouble(arrivalTimeField.getText()), Double.parseDouble(burstTimeField.getText()), ColorField.getValue().toString().substring(2));
         }
         Table.getItems().add(p);
         sortProcesses();
         secondsArray.clear();
-        if(preemptiveRadioBtn.isSelected()){
-            secondsArray = Priority.getPrioritySecondsArray(temp,true);
-        }else if(nonPreemptiveRadioBtn.isSelected()){
-            secondsArray = Priority.getPrioritySecondsArray(temp,false);
-        }
+        secondsArray = FCFS.getFCFSSecondsArray(temp);
         updateAverage(temp);
+    }
+    private void sortProcesses(){
+        processesList = Table.getItems();
+        temp = new ArrayList<>(processesList);
+        Process.sort(temp);
+        Process.calculateActualStartTimes(temp);
+        Table.setItems(FXCollections.observableArrayList(temp));
+        maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
     }
     private void updateAverage(ArrayList<Process> processes){
         double sumTA = 0;
@@ -297,14 +263,6 @@ public class PriorityController implements Initializable {
         }
         averageTA.setText(String.format("%.2f", sumTA / processes.size()));
         averageWT.setText(String.format("%.2f", sumWT / processes.size()));
-    }
-    private void sortProcesses(){
-        processesList = Table.getItems();
-        temp = new ArrayList<>(processesList);
-        Process.sort(temp);
-        Process.calculateActualStartTimes(temp);
-        Table.setItems(FXCollections.observableArrayList(temp));
-        maxSeconds = (int)temp.get(temp.size()-1).getActualTime() + (int)temp.get(temp.size()-1).getBurstTime();
     }
     private Color generateRandomColor() {
         Random random = new Random();
@@ -356,14 +314,12 @@ public class PriorityController implements Initializable {
         timeLine.setCycleCount(Timeline.INDEFINITE);
         timeLine.play();
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ATCol.setCellValueFactory(new PropertyValueFactory<Process, String>("arrivalTime"));
         PNCol.setCellValueFactory(new PropertyValueFactory<Process, String>("name"));
         RBTCol.setCellValueFactory(new PropertyValueFactory<Process, String>("RemainingBurstTime"));
         BTCol.setCellValueFactory(new PropertyValueFactory<Process, String>("burstTime"));
-        priorityCol.setCellValueFactory(new PropertyValueFactory<Process, String>("priority"));
         // Set color pane cell factory
         Callback<TableColumn<Process, String>, TableCell<Process, String>> colorCellFactory = (TableColumn<Process, String> param) -> {
             final TableCell<Process, String> cell = new TableCell<Process, String>() {

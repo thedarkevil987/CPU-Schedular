@@ -1,4 +1,4 @@
-package com.operatingsystem.operaingsystems;
+package com.operatingsystem.operatingsystems;
 
 
 import java.util.ArrayList;

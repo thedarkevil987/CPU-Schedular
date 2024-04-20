@@ -1,4 +1,4 @@
-package com.operatingsystem.operaingsystems;
+package com.operatingsystem.operatingsystems;
 
 import com.jfoenix.controls.JFXButton;
 import eu.iamgio.animated.transition.AnimatedThemeSwitcher;
@@ -67,7 +67,7 @@ public class MainControllerUI {
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
         Stage stage =new Stage();
-        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operatingsystems/cpu.png").toExternalForm()));
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);

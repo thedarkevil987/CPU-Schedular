@@ -57,7 +57,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.operatingsystem.operaingsystems/com.operatingsystem.operaingsystems.MainApplication</mainClass>
+              <mainClass>com.operatingsystem.operaingsystems/com.operatingsystem.operatingsystems.MainApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

@@ -1,4 +1,4 @@
-package com.operatingsystem.operaingsystems;
+package com.operatingsystem.operatingsystems;
 
 import eu.iamgio.animated.transition.AnimatedThemeSwitcher;
 import eu.iamgio.animated.transition.animations.clip.CircleClipOut;
@@ -20,7 +20,7 @@ public class MainApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("/styles/dark.css").toExternalForm());
         AnimatedThemeSwitcher themeSwitcher = new AnimatedThemeSwitcher(scene, new CircleClipOut());
         themeSwitcher.init();
-        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operaingsystems/cpu.png").toExternalForm()));
+        stage.getIcons().add(new Image(getClass().getResource("/com/operatingsystem/operatingsystems/cpu.png").toExternalForm()));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);

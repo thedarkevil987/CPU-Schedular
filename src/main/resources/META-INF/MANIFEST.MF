@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: com.operatingsystem.operaingsystems.MainApplication
+Main-Class: com.operatingsystem.operatingsystems.MainApplication
 
